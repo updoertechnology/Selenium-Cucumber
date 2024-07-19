@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <!-- standard, dark -->
+        <theme>standard</theme>
+
+        <!-- document encoding -->
+        <!-- defaults to UTF-8 -->
+        <encoding>UTF-8</encoding>
+
+        <!-- protocol for script and stylesheets -->
+        <!-- defaults to https -->
+        <protocol>https</protocol>
+
+        <!-- title of the document -->
+        <documentTitle>Test Report</documentTitle>
+
+        <!-- report name - displayed at top-nav -->
+        <reportName>
+            <![CDATA[
+                <ul id='nav-mobile' class='left hide-on-med-and-down nav-left'>
+                </ul>
+                <ul class='hide-on-med-and-down' >
+                    <li>
+                        <span class='label font-oakwood'>Automation Test Report</span>
+                    </li>
+                </ul>
+            ]]>
+        </reportName>
+
+        <!-- report headline - displayed at top-nav, after reportHeadline -->
+        <reportHeadline>Report</reportHeadline>
+
+        <!-- global date format override -->
+        <!-- defaults to yyyy-MM-dd -->
+        <dateFormat>yyyy-MM-dd</dateFormat>
+        <!---->
+        <!--&lt;!&ndash; global time format override &ndash;&gt;-->
+        <!--&lt;!&ndash; defaults to HH:mm:ss &ndash;&gt;-->
+
+        <timeFormat>HH:mm:ss</timeFormat>
+        <!-- location of charts in the test view -->
+        <!-- top, bottom -->
+
+        <testViewChartLocation>bottom</testViewChartLocation>
+
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+                   $( "head" ).append('<link rel="shortcut icon" href="https://www.photon.in/img/favicon.ico" type="image/x-icon" />');
+                   $( ".brand-logo" ).remove();
+                   $( "ul.nav-right>li+li>a>span" ).remove();
+                });
+            ]]>
+        </scripts>
+
+        <!-- custom styles -->
+        <styles>
+            <![CDATA[
+                .font-oakwood{ font-size: 27px;color: #606060;font-style: oblique;padding-left: 20px; }
+                .mrg{ padding-left: 11px !important; }
+                .nav-wrapper{ background-color: #FFFFFF; }
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>
